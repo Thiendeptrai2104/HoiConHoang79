@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Xúc Vật</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #111;
+            text-align: center;
+            color: #ddd;
+        }
+        .header {
+            background: #000;
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #222;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 16px;
+            background: #444;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+        }
+        .button:hover {
+            background: #666;
+            transform: translateY(-3px);
+        }
+        .content {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #333;
+            border-radius: 10px;
+            color: white;
+        }
+        .footer {
+            margin-top: 20px;
+            padding: 15px;
+            background: #000;
+            color: white;
+            font-size: 14px;
+            border-radius: 0 0 10px 10px;
+        }
+    </style>
+    <script>
+        function showContent(id) {
+            document.getElementById("content").innerHTML = document.getElementById(id).innerHTML;
+            document.getElementById("content").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="header">CHÀO MỪNG BẠN ĐẾN VỚI HỘI CON HOANG!</div>
+    <div class="container">
+        <h1>Khám phá hội con hoang!</h1>
+        <p>Hội con hoang được thành lập bởi Nguyễn Thanh Liêm và 1 số thành phần cặn bã khác.</p>
+        <p>Con hoang không chỉ ngu mà còn đần và có thể bị khuyết tật não.</p>
+        <p>Dưới đây là tất cả về con hoang.</p>
+        
+        <button class="button" onclick="showContent('htmlContent')">Liêm mồ côi</button>
+        <button class="button" onclick="showContent('cssContent')">Những nơi có con hoang</button>
+        <button class="button" onclick="showContent('jsContent')">Cách phòng tránh con hoang</button>
+        
+        <div id="content" class="content"></div>
+        
+        <div id="htmlContent" style="display:none;">
+            <h2>Liêm mồ côi?</h2>
+            <p>Liêm mồ côi tên đầy đủ mà Nguyễn Thanh Liêm, là người sáng lập ra hội con hoang đồng thời cũng là thành phần ngu nhất.</p>
+        </div>
+        <div id="cssContent" style="display:none;">
+            <h2>Những nơi có con hoang?</h2>
+            <p>Khí hậu có thể thay đổi quanh năm nhưng con hoang thì không thể thay đổi, con hoang chủ yếu tập trung vào những ngày thường , vào lúc chiều tối tại những nơi như dưới chân cầu ,quán net , quán cafe v.v.</p>
+        </div>
+        <div id="jsContent" style="display:none;">
+            <h2>Cách phòng tránh con hoang?</h2>
+            <p>Không có cách nào để phòng tránh con hoang , hãy cẩn trọng và chúc may mắn.</p>
+        </div>
+    </div>
+    <div class="footer">&copy; 2025 - Thiết kế bởi Liêm mồ côi</div>
+</body>
+</html>
